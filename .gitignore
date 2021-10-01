@@ -1,0 +1,13 @@
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sqlite
+
+# IDE files ignore
+.idea
+
+#ignore docker and related files
+#docker-compose.yml
+#uploads.ini
