@@ -11,8 +11,6 @@ if ( isset( $_SESSION["error"] ) ) {
   $_SESSION ['attempt_failed'] ++;
 }
 
-var_dump( $_SESSION ['attempt_failed'] );
-
 if ( $_SESSION ['attempt_failed'] > 2 ) {
 
   $fail = true;
