@@ -19,11 +19,9 @@ if ( $_SESSION ['attempt_failed'] >= 4 ) {
 
   $startTime = time() - $_SESSION['startTime'];
 
-  if ( isset( $_SESSION["locked"] ) ) {
-    if ( $startTime > 300 ) {
-      unset( $_SESSION['startTime'] );
-      unset( $_SESSION["attempt_failed"] );
-    }
+  if ( $startTime > 300 ) {
+    unset( $_SESSION['startTime'] );
+    unset( $_SESSION["attempt_failed"] );
   }
 }
 
@@ -57,7 +55,6 @@ if ( $_SESSION ['attempt_failed'] >= 4 ) {
     </label>
     <input type="password" name="password" placeholder="Password" id="password" required>
     <?php if ( $fail ) {
-      $_SESSION["locked"] = time();
       echo '<span>Попробуйте еще раз через ' . ( 300 - $startTime ) . ' секунд</span>';
     } else { ?>
       <input type="submit" value="Login">
