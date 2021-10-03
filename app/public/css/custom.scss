@@ -22,11 +22,17 @@ body {
     border-bottom: 1px solid #dee0e4;
   }
 
+  h2 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 18px;
+  }
+
   form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 20px;
+    padding: 20px 0 0;
 
     input[type="password"], input[type="text"] {
       width: 310px;
@@ -62,5 +68,34 @@ body {
       background-color: #3274d6;
       color: #fff;
     }
+
+    span {
+      color: #5b6574;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+
+body.loggedin {
+  background-color: #f3f4f7;
+}
+.content {
+  width: 1000px;
+  margin: 0 auto;
+
+  h2 {
+    margin: 0;
+    padding: 25px 0;
+    font-size: 22px;
+    border-bottom: 1px solid #e0e0e3;
+    color: #4a536e;
+  }
+
+  p {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+    margin: 25px 0;
+    padding: 25px;
+    background-color: #fff;
   }
 }
