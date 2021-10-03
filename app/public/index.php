@@ -7,9 +7,11 @@ if ( isset( $_SESSION['isLogged'] ) ) {
   exit;
 }
 
-$_SESSION ['attempt_failed'] ++;
+if ( isset( $_SESSION["error"] ) ) {
+  $_SESSION ['attempt_failed'] ++;
+}
 
-if ( $_SESSION ['attempt_failed'] >= 4 ) {
+if ( $_SESSION ['attempt_failed'] > 2 ) {
 
   $fail = true;
 
@@ -63,5 +65,3 @@ if ( $_SESSION ['attempt_failed'] >= 4 ) {
 </div>
 </body>
 </html>
-
-
